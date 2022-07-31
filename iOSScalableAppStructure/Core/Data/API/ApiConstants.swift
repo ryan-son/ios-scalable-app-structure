@@ -8,6 +8,6 @@
 enum ApiConstants {
   static let host = "api.petfinder.com"
   static let grantType = ""
-  static let clientId = "ryan.son1002@gmail.com"
+  static let clientId = "VKi6JMfSMpZJfJOI5OOjekI8zS9rTAqiAca9KkWth7Qv9KSFYm"
   static let clientSecret = "G5ET7tkG6RiQXPujMzgw74ZM5BizTYZs9RUZf5AG"
 }
