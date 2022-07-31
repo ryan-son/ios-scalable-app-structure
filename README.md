@@ -10,3 +10,6 @@
 | Accessibility | 동적 텍스트와 적절한 색상을 사용하고 VoiceOver를 지원하여 더 많은 사용자가 앱을 사용할 수 있도록 한다. |
 | Localization | 전 세계 다양한 사용자를 위해 앱을 출시한 지역에 맞게 앱을 준비한다. |
 | App Privacy | 특정 기능을 사용하기 위해 사용자에게 권한을 요청하고 앱에서 수집하는 사용자 데이터를 안내한다. |
+
+# API Documentation
+- [Pet finder API Documentation](https://www.petfinder.com/developers/v2/docs/)
