@@ -11,6 +11,7 @@
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
 		AAA228102895078000081167 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280F2895078000081167 /* Preview Assets.xcassets */; };
+		AAA2281C2896659300081167 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2281B2896659300081167 /* ApiConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAA2280C2895078000081167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAA2280F2895078000081167 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAA2281B2896659300081167 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		AAA228072895077F00081167 /* iOSScalableAppStructure */ = {
 			isa = PBXGroup;
 			children = (
+				AAA228162896655E00081167 /* Core */,
 				AAA228082895077F00081167 /* iOSScalableAppStructureApp.swift */,
 				AAA2280A2895077F00081167 /* ContentView.swift */,
 				AAA2280C2895078000081167 /* Assets.xcassets */,
@@ -65,6 +68,38 @@
 				AAA2280F2895078000081167 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAA228162896655E00081167 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AAA228172896656500081167 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AAA228172896656500081167 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AAA228182896656E00081167 /* API */,
+				AAA2281A2896658200081167 /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AAA228182896656E00081167 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AAA2281B2896659300081167 /* ApiConstants.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AAA2281A2896658200081167 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +174,7 @@
 			files = (
 				AAA2280B2895077F00081167 /* ContentView.swift in Sources */,
 				AAA228092895077F00081167 /* iOSScalableAppStructureApp.swift in Sources */,
+				AAA2281C2896659300081167 /* ApiConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
