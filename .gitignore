@@ -67,3 +67,6 @@ Package.resolved
 
 ### CocoaPods ###
 Pods/
+
+### Test files ###
+*.swift.plist
