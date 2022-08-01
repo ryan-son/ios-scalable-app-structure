@@ -22,6 +22,11 @@ class RequestManagerTests: XCTestCase {
     )
   }
 
+  override func tearDown() {
+    sut = nil
+    super.tearDown()
+  }
+
   func testRequestAnimals() async throws {
     guard let container: AnimalsContainer = try await sut?
       .perform(AnimalsRequestMock.getAnimals) else {

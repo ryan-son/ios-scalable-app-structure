@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA34D7922897F7D800D37F26 /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */; };
 		AAA228092895077F00081167 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA228082895077F00081167 /* App.swift */; };
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
 		AAA228052895077F00081167 /* iOSScalableAppStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSScalableAppStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA228082895077F00081167 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			children = (
 				AACE3E122897D605005ACB10 /* Helper */,
 				AACE3E112897D602005ACB10 /* Mock */,
+				AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */,
 				AACF52A22897DAC2001856C5 /* RequestManagerTests.swift */,
 			);
 			path = API;
@@ -597,6 +600,7 @@
 				AACF52A32897DAC2001856C5 /* RequestManagerTests.swift in Sources */,
 				AACE3E142897D623005ACB10 /* ApiManagerMock.swift in Sources */,
 				AACF52A12897D964001856C5 /* AnimalsRequestMock.swift in Sources */,
+				AA34D7922897F7D800D37F26 /* AccessTokenManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
