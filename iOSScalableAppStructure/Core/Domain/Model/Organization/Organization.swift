@@ -17,7 +17,7 @@ struct Organization: Decodable {
 
 struct Contact: Decodable {
   var id: Int?
-  var email: String
+  var email: String?
   var phone: String?
   var address: Address?
 }
