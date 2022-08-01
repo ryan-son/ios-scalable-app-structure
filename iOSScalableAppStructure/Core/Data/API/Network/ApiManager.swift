@@ -12,6 +12,7 @@ protocol ApiManagerProtocol {
     _ request: RequestProtocol,
     authToken: String
   ) async throws -> Data
+  func requestToken() async throws -> Data
 }
 
 final class ApiManager: ApiManagerProtocol {
@@ -37,5 +38,9 @@ final class ApiManager: ApiManagerProtocol {
       throw NetworkError.invalidServerResponse
     }
     return data
+  }
+
+  func requestToken() async throws -> Data {
+    return try await perform(AuthTokenRequest.auth)
   }
 }
