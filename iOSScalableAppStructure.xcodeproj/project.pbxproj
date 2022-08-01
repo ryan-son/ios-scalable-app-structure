@@ -427,8 +427,8 @@
 			children = (
 				AACE3E122897D605005ACB10 /* Helper */,
 				AACE3E112897D602005ACB10 /* Mock */,
-				AACF52A22897DAC2001856C5 /* RequestManagerTests.swift */,
 				AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */,
+				AACF52A22897DAC2001856C5 /* RequestManagerTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
