@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA34D7922897F7D800D37F26 /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */; };
+		AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */; };
 		AAA228092895077F00081167 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA228082895077F00081167 /* App.swift */; };
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
+		AA34D7A128980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSScalableAppStructure.xcdatamodel; sourceTree = "<group>"; };
 		AAA228052895077F00081167 /* iOSScalableAppStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSScalableAppStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA228082895077F00081167 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA34D7A32898C72900D37F26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AAA227FC2895077F00081167 = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +220,9 @@
 		AAA2281A2896658200081167 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				AA34D7A32898C72900D37F26 /* Extensions */,
 				AAA2281D2896854100081167 /* Persistence.swift */,
+				AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -580,6 +591,7 @@
 				AAA2282D2896865C00081167 /* AnimalDetailsView.swift in Sources */,
 				AACE3DDB2896D626005ACB10 /* AnimalEnvironment.swift in Sources */,
 				AACE3DD72896D5BD005ACB10 /* VideoLink.swift in Sources */,
+				AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */,
 				AAA22825289685DD00081167 /* Coat.swift in Sources */,
 				AACE3E042896F269005ACB10 /* AnimalsContainer.swift in Sources */,
 				AACE3DEE2896E56D005ACB10 /* Occupiable.swift in Sources */,
@@ -862,6 +874,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA34D7A128980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodel */,
+			);
+			currentVersion = AA34D7A128980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodel */;
+			path = iOSScalableAppStructure.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AAA227FD2895077F00081167 /* Project object */;
 }
