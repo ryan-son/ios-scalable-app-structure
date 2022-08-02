@@ -9,7 +9,7 @@ extension VideoLink: CoreDataPersistable {
 
   typealias ManagedType = VideoLinkEntity
 
-  var keyMap: [PartialKeyPath<VideoLink> : String] {
+  var keyMap: [PartialKeyPath<VideoLink>: String] {
     return [
       \.id: "id",
        \.embedded: "embedded"

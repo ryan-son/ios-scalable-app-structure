@@ -9,7 +9,7 @@ extension PhotoSizes: CoreDataPersistable {
 
   typealias ManagedType = PhotoSizesEntity
 
-  var keyMap: [PartialKeyPath<PhotoSizes> : String] {
+  var keyMap: [PartialKeyPath<PhotoSizes>: String] {
     return [
       \.id: "id",
        \.small: "small",

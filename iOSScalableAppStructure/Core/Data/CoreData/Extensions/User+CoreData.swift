@@ -9,7 +9,7 @@ extension User: CoreDataPersistable {
 
   typealias ManagedType = UserEntity
 
-  var keyMap: [PartialKeyPath<User> : String] {
+  var keyMap: [PartialKeyPath<User>: String] {
     return [
       \.id: "id",
        \.name: "name",

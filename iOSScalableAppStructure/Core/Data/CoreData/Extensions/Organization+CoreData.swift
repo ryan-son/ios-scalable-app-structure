@@ -11,7 +11,7 @@ extension Organization: CoreDataPersistable {
 
   typealias ManagedType = OrganizationEntity
 
-  var keyMap: [PartialKeyPath<Organization> : String] {
+  var keyMap: [PartialKeyPath<Organization>: String] {
     return [
       \.id: "id",
        \.contact: "contact",

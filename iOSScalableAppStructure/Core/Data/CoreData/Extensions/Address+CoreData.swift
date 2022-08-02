@@ -9,7 +9,7 @@ extension Address: CoreDataPersistable {
 
   typealias ManagedType = AddressEntity
 
-  var keyMap: [PartialKeyPath<Address> : String] {
+  var keyMap: [PartialKeyPath<Address>: String] {
     return [
       \.address1: "address1",
        \.address2: "address2",
