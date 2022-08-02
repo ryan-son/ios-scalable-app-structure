@@ -9,7 +9,7 @@ extension AnimalEnvironment: CoreDataPersistable {
 
   typealias ManagedType = AnimalEnvironmentEntity
 
-  var keyMap: [PartialKeyPath<AnimalEnvironment> : String] {
+  var keyMap: [PartialKeyPath<AnimalEnvironment>: String] {
     return [
       \.id: "id",
        \.cats: "cats",

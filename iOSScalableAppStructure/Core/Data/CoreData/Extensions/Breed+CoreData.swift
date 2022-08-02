@@ -11,7 +11,7 @@ extension Breed: CoreDataPersistable {
 
   typealias ManagedType = BreedEntity
 
-  var keyMap: [PartialKeyPath<Breed> : String] {
+  var keyMap: [PartialKeyPath<Breed>: String] {
     return [
       \.primary: "primary",
        \.secondary: "secondary",

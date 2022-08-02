@@ -21,7 +21,7 @@ enum AuthTokenRequest: RequestProtocol {
     return "/v2/oauth2/token"
   }
 
-  var params: [String : Any] {
+  var params: [String: Any] {
     return [
       "grant_type": ApiConstants.grantType,
       "client_id": ApiConstants.clientId,

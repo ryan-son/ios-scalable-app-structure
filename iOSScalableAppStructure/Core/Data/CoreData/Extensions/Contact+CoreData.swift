@@ -11,7 +11,7 @@ extension Contact: CoreDataPersistable {
 
   typealias ManagedType = ContactEntity
 
-  var keyMap: [PartialKeyPath<Contact> : String] {
+  var keyMap: [PartialKeyPath<Contact>: String] {
     return [
       \.id: "id",
        \.address: "address",

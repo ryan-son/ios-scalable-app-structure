@@ -9,7 +9,7 @@ extension ApiColors: CoreDataPersistable {
 
   typealias ManagedType = ApiColorsEntity
 
-  var keyMap: [PartialKeyPath<ApiColors> : String] {
+  var keyMap: [PartialKeyPath<ApiColors>: String] {
     return [
       \.id: "id",
        \.primary: "primary",

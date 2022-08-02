@@ -9,7 +9,7 @@ extension AnimalAttributes: CoreDataPersistable {
 
   typealias ManagedType = AnimalAttributesEntity
 
-  var keyMap: [PartialKeyPath<AnimalAttributes> : String] {
+  var keyMap: [PartialKeyPath<AnimalAttributes>: String] {
     return [
       \.id: "id",
        \.declawed: "declawed",
