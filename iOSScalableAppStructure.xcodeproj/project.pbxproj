@@ -11,6 +11,16 @@
 		AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */; };
 		AA34D7D92898D40A00D37F26 /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */; };
 		AA34D7DB2898E36B00D37F26 /* Breed+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */; };
+		AA34D7DD2898F19000D37F26 /* Address+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7DC2898F19000D37F26 /* Address+CoreData.swift */; };
+		AA34D7DF2898F20600D37F26 /* Animal+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7DE2898F20600D37F26 /* Animal+CoreData.swift */; };
+		AA34D7E12898FB8F00D37F26 /* AnimalAttributes+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7E02898FB8F00D37F26 /* AnimalAttributes+CoreData.swift */; };
+		AA34D7E32898FBEA00D37F26 /* AnimalEnvironment+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7E22898FBEA00D37F26 /* AnimalEnvironment+CoreData.swift */; };
+		AA34D7E52898FC2D00D37F26 /* ApiColors+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7E42898FC2D00D37F26 /* ApiColors+CoreData.swift */; };
+		AA34D7E72898FCC700D37F26 /* Contact+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7E62898FCC700D37F26 /* Contact+CoreData.swift */; };
+		AA34D7E92898FDB000D37F26 /* Organization+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7E82898FDB000D37F26 /* Organization+CoreData.swift */; };
+		AA34D7EB2898FF1800D37F26 /* PhotoSizes+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EA2898FF1800D37F26 /* PhotoSizes+CoreData.swift */; };
+		AA34D7ED2898FF7100D37F26 /* User+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EC2898FF7100D37F26 /* User+CoreData.swift */; };
+		AA34D7EF2898FFB900D37F26 /* VideoLink+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EE2898FFB900D37F26 /* VideoLink+CoreData.swift */; };
 		AAA228092895077F00081167 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA228082895077F00081167 /* App.swift */; };
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
@@ -73,6 +83,16 @@
 		AA34D7A128980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSScalableAppStructure.xcdatamodel; sourceTree = "<group>"; };
 		AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
 		AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7DC2898F19000D37F26 /* Address+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7DE2898F20600D37F26 /* Animal+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7E02898FB8F00D37F26 /* AnimalAttributes+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalAttributes+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7E22898FBEA00D37F26 /* AnimalEnvironment+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalEnvironment+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7E42898FC2D00D37F26 /* ApiColors+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiColors+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7E62898FCC700D37F26 /* Contact+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7E82898FDB000D37F26 /* Organization+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7EA2898FF1800D37F26 /* PhotoSizes+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoSizes+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7EC2898FF7100D37F26 /* User+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7EE2898FFB900D37F26 /* VideoLink+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoLink+CoreData.swift"; sourceTree = "<group>"; };
 		AAA228052895077F00081167 /* iOSScalableAppStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSScalableAppStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA228082895077F00081167 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,7 +163,17 @@
 			isa = PBXGroup;
 			children = (
 				AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */,
+				AA34D7DC2898F19000D37F26 /* Address+CoreData.swift */,
+				AA34D7DE2898F20600D37F26 /* Animal+CoreData.swift */,
+				AA34D7E02898FB8F00D37F26 /* AnimalAttributes+CoreData.swift */,
+				AA34D7E22898FBEA00D37F26 /* AnimalEnvironment+CoreData.swift */,
+				AA34D7E42898FC2D00D37F26 /* ApiColors+CoreData.swift */,
 				AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */,
+				AA34D7E62898FCC700D37F26 /* Contact+CoreData.swift */,
+				AA34D7E82898FDB000D37F26 /* Organization+CoreData.swift */,
+				AA34D7EA2898FF1800D37F26 /* PhotoSizes+CoreData.swift */,
+				AA34D7EC2898FF7100D37F26 /* User+CoreData.swift */,
+				AA34D7EE2898FFB900D37F26 /* VideoLink+CoreData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,7 +602,9 @@
 				AA34D7D92898D40A00D37F26 /* CoreDataPersistable.swift in Sources */,
 				AACE3DFC2896EC52005ACB10 /* AuthTokenRequest.swift in Sources */,
 				AACE3DCB2896D2F7005ACB10 /* Animal.swift in Sources */,
+				AA34D7E52898FC2D00D37F26 /* ApiColors+CoreData.swift in Sources */,
 				AAA228362896870200081167 /* SearchView.swift in Sources */,
+				AA34D7E72898FCC700D37F26 /* Contact+CoreData.swift in Sources */,
 				AACE3DDD2896D64B005ACB10 /* ApiColors.swift in Sources */,
 				AACE3DFF2896ED85005ACB10 /* ApiToken.swift in Sources */,
 				AACE3DE92896E3D9005ACB10 /* RequestProtocol.swift in Sources */,
@@ -580,30 +612,38 @@
 				AAA2280B2895077F00081167 /* ContentView.swift in Sources */,
 				AACE3DD52896D599005ACB10 /* PhotoSizes.swift in Sources */,
 				AACE3E0B2896FB5E005ACB10 /* AccessTokenManager.swift in Sources */,
+				AA34D7E92898FDB000D37F26 /* Organization+CoreData.swift in Sources */,
 				AACE3DF12896E6D1005ACB10 /* NetworkError.swift in Sources */,
 				AACE3DD32896D576005ACB10 /* Breed.swift in Sources */,
 				AACE3DDF2896D673005ACB10 /* AdoptionStatus.swift in Sources */,
 				AACE3E0D2896FC91005ACB10 /* AppUserDefaultsKeys.swift in Sources */,
+				AA34D7EF2898FFB900D37F26 /* VideoLink+CoreData.swift in Sources */,
 				AACE3DE12896D899005ACB10 /* Pagination.swift in Sources */,
+				AA34D7DF2898F20600D37F26 /* Animal+CoreData.swift in Sources */,
 				AACE3DEB2896E455005ACB10 /* RequestType.swift in Sources */,
 				AAA2281E2896854100081167 /* Persistence.swift in Sources */,
 				AACE3DCD2896D4E4005ACB10 /* Size.swift in Sources */,
 				AACE3DF62896EA60005ACB10 /* RequestManager.swift in Sources */,
 				AACE3DD12896D539005ACB10 /* Age.swift in Sources */,
 				AAA228092895077F00081167 /* App.swift in Sources */,
+				AA34D7DD2898F19000D37F26 /* Address+CoreData.swift in Sources */,
 				AAA2281C2896659300081167 /* ApiConstants.swift in Sources */,
 				AACE3DD92896D5D7005ACB10 /* AnimalAttributes.swift in Sources */,
 				AAA22827289685F000081167 /* Organization.swift in Sources */,
 				AACE3DCF2896D510005ACB10 /* Gender.swift in Sources */,
 				AAA2282D2896865C00081167 /* AnimalDetailsView.swift in Sources */,
+				AA34D7E32898FBEA00D37F26 /* AnimalEnvironment+CoreData.swift in Sources */,
 				AACE3DDB2896D626005ACB10 /* AnimalEnvironment.swift in Sources */,
 				AACE3DD72896D5BD005ACB10 /* VideoLink.swift in Sources */,
+				AA34D7ED2898FF7100D37F26 /* User+CoreData.swift in Sources */,
 				AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */,
 				AAA22825289685DD00081167 /* Coat.swift in Sources */,
+				AA34D7E12898FB8F00D37F26 /* AnimalAttributes+CoreData.swift in Sources */,
 				AA34D7DB2898E36B00D37F26 /* Breed+CoreData.swift in Sources */,
 				AACE3E042896F269005ACB10 /* AnimalsContainer.swift in Sources */,
 				AACE3DEE2896E56D005ACB10 /* Occupiable.swift in Sources */,
 				AACE3DF42896E8F0005ACB10 /* ApiManager.swift in Sources */,
+				AA34D7EB2898FF1800D37F26 /* PhotoSizes+CoreData.swift in Sources */,
 				AACE3DF92896EBA1005ACB10 /* DataParser.swift in Sources */,
 				AAA228322896869C00081167 /* AnimalsNearYouView.swift in Sources */,
 				AACE3DE32896DD5B005ACB10 /* AnimalsMock.swift in Sources */,
