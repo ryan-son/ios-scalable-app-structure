@@ -15,9 +15,9 @@ struct PersistenceController {
     let result = PersistenceController(inMemory: true)
     let viewContext = result.container.viewContext
 
-    for i in 0..<10 {
-      let newItem = Item(context: viewContext)
-      newItem.timestamp = Date()
+    for index in 0..<10 {
+      var animal = Animal.mock[index]
+      animal.toManagedObject(context: viewContext)
     }
 
     do {

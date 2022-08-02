@@ -21,6 +21,8 @@
 		AA34D7EB2898FF1800D37F26 /* PhotoSizes+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EA2898FF1800D37F26 /* PhotoSizes+CoreData.swift */; };
 		AA34D7ED2898FF7100D37F26 /* User+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EC2898FF7100D37F26 /* User+CoreData.swift */; };
 		AA34D7EF2898FFB900D37F26 /* VideoLink+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7EE2898FFB900D37F26 /* VideoLink+CoreData.swift */; };
+		AA34D7F128990AF400D37F26 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7F028990AF400D37F26 /* CoreDataHelper.swift */; };
+		AA34D7F428990E4900D37F26 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7F328990E4900D37F26 /* CoreDataTests.swift */; };
 		AAA228092895077F00081167 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA228082895077F00081167 /* App.swift */; };
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 		AA34D7EA2898FF1800D37F26 /* PhotoSizes+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoSizes+CoreData.swift"; sourceTree = "<group>"; };
 		AA34D7EC2898FF7100D37F26 /* User+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreData.swift"; sourceTree = "<group>"; };
 		AA34D7EE2898FFB900D37F26 /* VideoLink+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoLink+CoreData.swift"; sourceTree = "<group>"; };
+		AA34D7F028990AF400D37F26 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		AA34D7F328990E4900D37F26 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		AAA228052895077F00081167 /* iOSScalableAppStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSScalableAppStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA228082895077F00081167 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +182,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AA34D7F228990E3100D37F26 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AA34D7F328990E4900D37F26 /* CoreDataTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		AAA227FC2895077F00081167 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				AA34D7A32898C72900D37F26 /* Extensions */,
+				AA34D7F028990AF400D37F26 /* CoreDataHelper.swift */,
 				AAA2281D2896854100081167 /* Persistence.swift */,
 				AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */,
 			);
@@ -465,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				AACE3E102897D5E8005ACB10 /* API */,
+				AA34D7F228990E3100D37F26 /* CoreData */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -620,6 +634,7 @@
 				AA34D7EF2898FFB900D37F26 /* VideoLink+CoreData.swift in Sources */,
 				AACE3DE12896D899005ACB10 /* Pagination.swift in Sources */,
 				AA34D7DF2898F20600D37F26 /* Animal+CoreData.swift in Sources */,
+				AA34D7F128990AF400D37F26 /* CoreDataHelper.swift in Sources */,
 				AACE3DEB2896E455005ACB10 /* RequestType.swift in Sources */,
 				AAA2281E2896854100081167 /* Persistence.swift in Sources */,
 				AACE3DCD2896D4E4005ACB10 /* Size.swift in Sources */,
@@ -658,6 +673,7 @@
 			files = (
 				AACF529F2897D880001856C5 /* AccessTokenHelper.swift in Sources */,
 				AACF52A32897DAC2001856C5 /* RequestManagerTests.swift in Sources */,
+				AA34D7F428990E4900D37F26 /* CoreDataTests.swift in Sources */,
 				AACE3E142897D623005ACB10 /* ApiManagerMock.swift in Sources */,
 				AACF52A12897D964001856C5 /* AnimalsRequestMock.swift in Sources */,
 				AA34D7922897F7D800D37F26 /* AccessTokenManagerTests.swift in Sources */,
@@ -797,7 +813,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSScalableAppStructure/Preview Content\"";
-				DEVELOPMENT_TEAM = V5CFURAVD9;
+				DEVELOPMENT_TEAM = 5367DDDJ7Z;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -827,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSScalableAppStructure/Preview Content\"";
-				DEVELOPMENT_TEAM = V5CFURAVD9;
+				DEVELOPMENT_TEAM = 5367DDDJ7Z;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -854,9 +870,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5CFURAVD9;
+				DEVELOPMENT_TEAM = 5367DDDJ7Z;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -875,9 +892,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5CFURAVD9;
+				DEVELOPMENT_TEAM = 5367DDDJ7Z;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
