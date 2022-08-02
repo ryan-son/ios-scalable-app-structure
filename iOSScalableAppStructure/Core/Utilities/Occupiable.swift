@@ -16,5 +16,6 @@ extension Occupiable {
   }
 }
 
+extension AnyCollection: Occupiable {}
 extension Dictionary: Occupiable {}
 extension String: Occupiable {}

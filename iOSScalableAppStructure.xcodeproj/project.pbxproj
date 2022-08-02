@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA34D7922897F7D800D37F26 /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */; };
 		AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7A028980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld */; };
+		AA34D7D92898D40A00D37F26 /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */; };
+		AA34D7DB2898E36B00D37F26 /* Breed+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */; };
 		AAA228092895077F00081167 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA228082895077F00081167 /* App.swift */; };
 		AAA2280B2895077F00081167 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2280A2895077F00081167 /* ContentView.swift */; };
 		AAA2280D2895078000081167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA2280C2895078000081167 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 /* Begin PBXFileReference section */
 		AA34D7912897F7D800D37F26 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
 		AA34D7A128980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSScalableAppStructure.xcdatamodel; sourceTree = "<group>"; };
+		AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
+		AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+CoreData.swift"; sourceTree = "<group>"; };
 		AAA228052895077F00081167 /* iOSScalableAppStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSScalableAppStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA228082895077F00081167 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		AAA2280A2895077F00081167 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		AA34D7A32898C72900D37F26 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AA34D7D82898D40A00D37F26 /* CoreDataPersistable.swift */,
+				AA34D7DA2898E36B00D37F26 /* Breed+CoreData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA34D7D92898D40A00D37F26 /* CoreDataPersistable.swift in Sources */,
 				AACE3DFC2896EC52005ACB10 /* AuthTokenRequest.swift in Sources */,
 				AACE3DCB2896D2F7005ACB10 /* Animal.swift in Sources */,
 				AAA228362896870200081167 /* SearchView.swift in Sources */,
@@ -593,6 +600,7 @@
 				AACE3DD72896D5BD005ACB10 /* VideoLink.swift in Sources */,
 				AA34D7A228980F8B00D37F26 /* iOSScalableAppStructure.xcdatamodeld in Sources */,
 				AAA22825289685DD00081167 /* Coat.swift in Sources */,
+				AA34D7DB2898E36B00D37F26 /* Breed+CoreData.swift in Sources */,
 				AACE3E042896F269005ACB10 /* AnimalsContainer.swift in Sources */,
 				AACE3DEE2896E56D005ACB10 /* Occupiable.swift in Sources */,
 				AACE3DF42896E8F0005ACB10 /* ApiManager.swift in Sources */,
