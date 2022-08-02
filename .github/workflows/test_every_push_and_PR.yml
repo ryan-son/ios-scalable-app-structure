@@ -1,6 +1,8 @@
-name: test-every-PR-for-main
+name: test-every-push-and-PR
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
