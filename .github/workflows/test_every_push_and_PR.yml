@@ -1,0 +1,19 @@
+name: test-every-push-and-PR
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run tests
+      run: |
+        echo Testing...
+        xcodebuild clean test -project iOSScalableAppStructure.xcodeproj -scheme iOSScalableAppStructure -destination "platform=iOS Simulator,name=iPhone 13 Pro"
