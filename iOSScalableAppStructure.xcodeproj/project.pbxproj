@@ -61,7 +61,7 @@
 		AACE3DFF2896ED85005ACB10 /* ApiToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3DFE2896ED85005ACB10 /* ApiToken.swift */; };
 		AACE3E022896F0F7005ACB10 /* AnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E012896F0F7005ACB10 /* AnimalsRequest.swift */; };
 		AACE3E042896F269005ACB10 /* AnimalsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E032896F269005ACB10 /* AnimalsContainer.swift */; };
-		AACE3E082896F46A005ACB10 /* AnimalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E072896F46A005ACB10 /* AnimalRowView.swift */; };
+		AACE3E082896F46A005ACB10 /* AnimalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E072896F46A005ACB10 /* AnimalRow.swift */; };
 		AACE3E0B2896FB5E005ACB10 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E0A2896FB5E005ACB10 /* AccessTokenManager.swift */; };
 		AACE3E0D2896FC91005ACB10 /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E0C2896FC91005ACB10 /* AppUserDefaultsKeys.swift */; };
 		AACE3E142897D623005ACB10 /* ApiManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE3E132897D623005ACB10 /* ApiManagerMock.swift */; };
@@ -136,7 +136,7 @@
 		AACE3DFE2896ED85005ACB10 /* ApiToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiToken.swift; sourceTree = "<group>"; };
 		AACE3E012896F0F7005ACB10 /* AnimalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequest.swift; sourceTree = "<group>"; };
 		AACE3E032896F269005ACB10 /* AnimalsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsContainer.swift; sourceTree = "<group>"; };
-		AACE3E072896F46A005ACB10 /* AnimalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRowView.swift; sourceTree = "<group>"; };
+		AACE3E072896F46A005ACB10 /* AnimalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRow.swift; sourceTree = "<group>"; };
 		AACE3E0A2896FB5E005ACB10 /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
 		AACE3E0C2896FC91005ACB10 /* AppUserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsKeys.swift; sourceTree = "<group>"; };
 		AACE3E132897D623005ACB10 /* ApiManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerMock.swift; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 		AAA2282F2896868A00081167 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AACE3E072896F46A005ACB10 /* AnimalRowView.swift */,
+				AACE3E072896F46A005ACB10 /* AnimalRow.swift */,
 				AAA228312896869C00081167 /* AnimalsNearYouView.swift */,
 			);
 			path = Views;
@@ -663,7 +663,7 @@
 				AAA228322896869C00081167 /* AnimalsNearYouView.swift in Sources */,
 				AACE3DE32896DD5B005ACB10 /* AnimalsMock.swift in Sources */,
 				AAA22829289685FC00081167 /* User.swift in Sources */,
-				AACE3E082896F46A005ACB10 /* AnimalRowView.swift in Sources */,
+				AACE3E082896F46A005ACB10 /* AnimalRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

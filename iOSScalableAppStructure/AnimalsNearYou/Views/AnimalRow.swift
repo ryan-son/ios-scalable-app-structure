@@ -1,5 +1,5 @@
 //
-//  AnimalRowView.swift
+//  AnimalRow.swift
 //  iOSScalableAppStructure
 //
 //  Created by Geonhee on 2022/08/01.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimalRowView: View {
+struct AnimalRow: View {
 
   let animal: AnimalEntity
 
@@ -47,7 +47,7 @@ struct AnimalRowView: View {
 struct AnimalRow_Previews: PreviewProvider {
   static var previews: some View {
     if let animal = CoreDataHelper.testAnimalEntity() {
-      AnimalRowView(animal: animal)
+      AnimalRow(animal: animal)
     }
   }
 }
