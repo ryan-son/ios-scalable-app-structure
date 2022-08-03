@@ -40,4 +40,27 @@ class CoreDataTests: XCTestCase {
       "Pet coat did not match, was expecting Short, got \(first.coat.rawValue)"
     )
   }
+
+  func testDeleteManagedObject() throws {
+    // Given
+    let previewContext = PersistenceController.preview.container.viewContext
+
+    // When
+    let fetchRequest = AnimalEntity.fetchRequest()
+    guard let results = try? previewContext.fetch(fetchRequest),
+          let first = results.first else { return }
+
+    let expectedResult = results.count - 1
+    previewContext.delete(first)
+
+    // Then
+    guard let resultsAfterDeletion = try? previewContext.fetch(fetchRequest).count else { return }
+    XCTAssertEqual(
+      expectedResult,
+      resultsAfterDeletion,
+      """
+      The number of results was expected to be \(expectedResult) after deletion, was \(results.count)
+      """
+    )
+  }
 }
