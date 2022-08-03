@@ -100,7 +100,7 @@ extension AnimalEntity {
       .joined(separator: ", ")
   }
 
-  var animalSpecies: String {
+  @objc var animalSpecies: String {
     return species ?? "None"
   }
 }
