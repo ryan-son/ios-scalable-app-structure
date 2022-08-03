@@ -29,10 +29,10 @@ struct PersistenceController {
     return result
   }()
 
-  let container: NSPersistentContainer
+  let container: NSPersistentCloudKitContainer
 
   init(inMemory: Bool = false) {
-    container = NSPersistentContainer(name: "iOSScalableAppStructure")
+    container = NSPersistentCloudKitContainer(name: "iOSScalableAppStructure")
 
     if inMemory {
       container
