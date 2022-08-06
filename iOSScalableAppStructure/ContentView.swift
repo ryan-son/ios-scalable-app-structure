@@ -17,6 +17,9 @@ struct ContentView: View {
         viewModel: AnimalsNearYouViewModel(
           animalFetcher: FetchAnimalsService(
             requestManager: RequestManager()
+          ),
+          animalStore: AnimalStoreService(
+            context: PersistenceController.shared.container.newBackgroundContext()
           )
         )
       )
