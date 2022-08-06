@@ -9,31 +9,31 @@ import SwiftUI
 
 struct AnimalsNearYouView: View {
 
-  @SectionedFetchRequest<String, AnimalEntity>(
-    sectionIdentifier: \.animalSpecies,
+  @FetchRequest(
     sortDescriptors: [
-      NSSortDescriptor(keyPath: \AnimalEntity.species, ascending: true),
       NSSortDescriptor(keyPath: \AnimalEntity.timestamp, ascending: true)
     ],
     animation: .default
   )
-  private var sectionedAnimals: SectionedFetchResults<String, AnimalEntity>
-  @ObservedObject  var viewModel: AnimalsNearYouViewModel
+  private var animals: FetchedResults<AnimalEntity>
+  @ObservedObject var viewModel: AnimalsNearYouViewModel
 
   var body: some View {
     NavigationView {
       List {
-        ForEach(sectionedAnimals) { section in
-          Section(
-            content: {
-              ForEach(section) { animal in
-                NavigationLink(destination: AnimalDetailsView.init) {
-                  AnimalRow(animal: animal)
-                }
-              }
-            },
-            header: { Text(section.id) }
-          )
+        ForEach(animals) { animal in
+          NavigationLink(destination: AnimalDetailsView.init) {
+            AnimalRow(animal: animal)
+          }
+        }
+
+        if animals.isNotEmpty && viewModel.hasMoreAnimals {
+          ProgressView("Finding more animals...")
+            .padding()
+            .frame(maxWidth: .infinity)
+            .task {
+              await viewModel.fetchMoreAnimals()
+            }
         }
       }
       .task {
@@ -42,7 +42,7 @@ struct AnimalsNearYouView: View {
       .listStyle(.plain)
       .navigationTitle("Animals near you")
       .overlay {
-        if viewModel.isLoading && sectionedAnimals.isEmpty {
+        if viewModel.isLoading && animals.isEmpty {
           ProgressView("Finding Animals near you...")
         }
       }
