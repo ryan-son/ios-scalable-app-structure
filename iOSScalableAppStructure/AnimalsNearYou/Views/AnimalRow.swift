@@ -19,13 +19,16 @@ struct AnimalRow: View {
           image.resizable()
         },
         placeholder: {
-          Image(systemName: "swift")
-            .resizable()
+          RoundedRectangle(cornerRadius: 8)
+            .strokeBorder(Color.gray.opacity(0.4), lineWidth: 1)
+            .background(Color.gray.opacity(0.1))
             .overlay {
               if animal.picture != nil {
                 ProgressView()
                   .frame(maxWidth: .infinity, maxHeight: .infinity)
-                  .background(.gray.opacity(0.4))
+                  .background(.gray.opacity(0.1))
+              } else {
+                Text("No Image")
               }
             }
         }
