@@ -13,14 +13,20 @@ struct ContentView: View {
 
   var body: some View {
     TabView {
-      AnimalsNearYouView()
-        .environment(
-          \.managedObjectContext,
-           managedObjectContext
+      AnimalsNearYouView(
+        viewModel: AnimalsNearYouViewModel(
+          animalFetcher: FetchAnimalsService(
+            requestManager: RequestManager()
+          )
         )
-        .tabItem {
-          Label("Near you", systemImage: "location")
-        }
+      )
+      .environment(
+        \.managedObjectContext,
+         managedObjectContext
+      )
+      .tabItem {
+        Label("Near you", systemImage: "location")
+      }
 
       SearchView()
         .tabItem {
