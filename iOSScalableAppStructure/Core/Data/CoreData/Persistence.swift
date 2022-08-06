@@ -39,15 +39,15 @@ struct PersistenceController {
         .persistentStoreDescriptions
         .first?
         .url = URL(fileURLWithPath: "/dev/null")
-
-      container.loadPersistentStores { _, error in
-        if let error = error as NSError? {
-          fatalError("Unresolved error \(error), \(error.userInfo)")
-        }
-      }
-      container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-      container.viewContext.automaticallyMergesChangesFromParent = true
     }
+
+    container.loadPersistentStores { _, error in
+      if let error = error as NSError? {
+        fatalError("Unresolved error \(error), \(error.userInfo)")
+      }
+    }
+    container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+    container.viewContext.automaticallyMergesChangesFromParent = true
   }
 
   static func save() {
