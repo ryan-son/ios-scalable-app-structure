@@ -18,9 +18,13 @@ protocol AnimalSearcher {
 final class SearchViewModel: ObservableObject {
 
   @Published var searchText = ""
+  @Published var ageSelection: AnimalSearchAge = .none
+  @Published var typeSelection: AnimalSearchType = .none
 
   var shouldFilter: Bool {
-    return searchText.isNotEmpty
+    return searchText.isNotEmpty ||
+    ageSelection != .none ||
+    typeSelection != .none
   }
 
   private let animalSearcher: AnimalSearcher
@@ -38,8 +42,8 @@ final class SearchViewModel: ObservableObject {
     Task {
       let animals = await animalSearcher.searchAnimal(
         by: searchText,
-        age: .none,
-        type: .none
+        age: ageSelection,
+        type: typeSelection
       )
 
       do {
@@ -48,5 +52,10 @@ final class SearchViewModel: ObservableObject {
         print("Error storing animals... \(error.localizedDescription)")
       }
     }
+  }
+
+  func clearFilters() {
+    ageSelection = .none
+    typeSelection = .none
   }
 }
