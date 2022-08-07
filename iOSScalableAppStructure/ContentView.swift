@@ -23,10 +23,6 @@ struct ContentView: View {
           )
         )
       )
-      .environment(
-        \.managedObjectContext,
-         managedObjectContext
-      )
       .tabItem {
         Label("Near you", systemImage: "location")
       }
@@ -36,6 +32,7 @@ struct ContentView: View {
           Label("Search", systemImage: "magnifyingglass")
         }
     }
+    .environment(\.managedObjectContext,managedObjectContext)
   }
 }
 

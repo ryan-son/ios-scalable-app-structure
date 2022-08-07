@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct SearchView: View {
+
+  @FetchRequest(
+    sortDescriptors: [
+      NSSortDescriptor(
+        keyPath: \AnimalEntity.timestamp,
+        ascending: true
+      )
+    ],
+    animation: .default
+  )
+  private var animals: FetchedResults<AnimalEntity>
+
   var body: some View {
-    Text("TODO: Search")
+    NavigationView {
+      AnimalListView(animals: animals)
+      .navigationTitle("Find your future pet")
+    }
+    .navigationViewStyle(.stack)
   }
 }
 
 struct SearchView_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
-      SearchView()
-    }
-    .previewLayout(.sizeThatFits)
-    .previewDisplayName("iPhone SE (2nd generation)")
-
-    NavigationView {
-      SearchView()
-    }
-    .previewDevice("iPhone 12 Pro")
-    .previewDisplayName("iPhone 12 Pro")
+    SearchView()
   }
 }

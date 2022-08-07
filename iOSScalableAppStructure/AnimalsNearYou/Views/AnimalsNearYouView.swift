@@ -20,13 +20,7 @@ struct AnimalsNearYouView: View {
 
   var body: some View {
     NavigationView {
-      List {
-        ForEach(animals) { animal in
-          NavigationLink(destination: AnimalDetailsView.init) {
-            AnimalRow(animal: animal)
-          }
-        }
-
+      AnimalListView(animals: animals) {
         if animals.isNotEmpty && viewModel.hasMoreAnimals {
           ProgressView("Finding more animals...")
             .padding()
