@@ -38,6 +38,11 @@ struct SearchView: View {
   var body: some View {
     NavigationView {
       AnimalListView(animals: filteredAnimals)
+        .overlay {
+          if filteredAnimals.isEmpty && viewModel.searchText.isNotEmpty {
+            EmptyResultsView(query: viewModel.searchText)
+          }
+        }
         .searchable(
           text: $viewModel.searchText,
           placement: .navigationBarDrawer(displayMode: .always)
