@@ -19,11 +19,19 @@ struct SearchView: View {
     animation: .default
   )
   private var animals: FetchedResults<AnimalEntity>
-  @State var searchText = ""
+
+
+  @StateObject var viewModel = SearchViewModel(
+    animalSearcher: AnimalSearcherService(requestManager: RequestManager()),
+    animalStore: AnimalStoreService(
+      context: PersistenceController.shared.container.newBackgroundContext()
+    )
+  )
   var filteredAnimals: [AnimalEntity] {
+    guard viewModel.shouldFilter else { return [] }
     return animals.filter {
-      guard searchText.isNotEmpty else { return true }
-      return $0.name?.contains(searchText) ?? false
+      guard viewModel.searchText.isNotEmpty else { return true }
+      return $0.name?.contains(viewModel.searchText) ?? false
     }
   }
 
@@ -31,9 +39,12 @@ struct SearchView: View {
     NavigationView {
       AnimalListView(animals: filteredAnimals)
         .searchable(
-          text: $searchText,
+          text: $viewModel.searchText,
           placement: .navigationBarDrawer(displayMode: .always)
         )
+        .onChange(of: viewModel.searchText) { _ in
+          viewModel.search()
+        }
         .navigationTitle("Find your future pet")
     }
     .navigationViewStyle(.stack)
