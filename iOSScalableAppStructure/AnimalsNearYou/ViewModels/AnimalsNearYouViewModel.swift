@@ -15,7 +15,6 @@ protocol AnimalStore {
   func save(animals: [Animal]) async throws
 }
 
-@MainActor
 final class AnimalsNearYouViewModel: ObservableObject {
 
   private let animalFetcher: AnimalsFetcher
@@ -35,19 +34,22 @@ final class AnimalsNearYouViewModel: ObservableObject {
     self.animalStore = animalStore
   }
 
-  func fetchAnimals() async {
-    Task { @MainActor in
-      let animals = await animalFetcher.fetchAnimals(page: page)
+  @MainActor
+  @discardableResult
+  func fetchAnimals() async -> [Animal] {
+    let animals = await animalFetcher.fetchAnimals(page: page)
 
-      do {
-        try await animalStore.save(animals: animals)
-      } catch {
-        print("Error storing animals... \(error.localizedDescription)")
-      }
+    do {
+      try await animalStore.save(animals: animals)
+    } catch {
+      print("Error storing animals... \(error.localizedDescription)")
+    }
 
+    if animals.isNotEmpty {
       self.isLoading = false
       self.hasMoreAnimals = animals.isNotEmpty
     }
+    return animals
   }
 
   func fetchMoreAnimals() async {
