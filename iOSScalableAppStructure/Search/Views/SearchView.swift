@@ -19,11 +19,22 @@ struct SearchView: View {
     animation: .default
   )
   private var animals: FetchedResults<AnimalEntity>
+  @State var searchText = ""
+  var filteredAnimals: [AnimalEntity] {
+    return animals.filter {
+      guard searchText.isNotEmpty else { return true }
+      return $0.name?.contains(searchText) ?? false
+    }
+  }
 
   var body: some View {
     NavigationView {
-      AnimalListView(animals: animals)
-      .navigationTitle("Find your future pet")
+      AnimalListView(animals: filteredAnimals)
+        .searchable(
+          text: $searchText,
+          placement: .navigationBarDrawer(displayMode: .always)
+        )
+        .navigationTitle("Find your future pet")
     }
     .navigationViewStyle(.stack)
   }
