@@ -58,4 +58,9 @@ final class SearchViewModel: ObservableObject {
     ageSelection = .none
     typeSelection = .none
   }
+
+  func selectTypeSuggestion(_ type: AnimalSearchType) {
+    typeSelection = type
+    search()
+  }
 }
