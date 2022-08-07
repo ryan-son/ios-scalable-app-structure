@@ -8,27 +8,78 @@
 import XCTest
 @testable import iOSScalableAppStructure
 
-@MainActor
 final class AnimalsNearYouViewModelTestCase: XCTestCase {
 
   let testContext = PersistenceController.preview.container.viewContext
-  var viewModel: AnimalsNearYouViewModel!
+  var sut: AnimalsNearYouViewModel!
 
-  @MainActor
   override func setUp() {
-    super.setUp()
-    viewModel = AnimalsNearYouViewModel(
-      isLoading: true,
-      animalFetcher: AnimalsFetcherMock(),
-      animalStore: AnimalStoreService(context: testContext)
-    )
+    Task { @MainActor in
+      try await super.setUp()
+      sut = AnimalsNearYouViewModel(
+        isLoading: true,
+        animalFetcher: AnimalsFetcherMock(),
+        animalStore: AnimalStoreService(context: testContext)
+      )
+    }
+  }
+
+  override func tearDown() {
+    Task { @MainActor in
+      sut = nil
+      try await super.tearDown()
+    }
   }
 
   func testFetchAnimalsLoadingState() {
     Task { @MainActor in
-      XCTAssertTrue(viewModel.isLoading, "The view model should be loading, but it isn't")
-      await viewModel.fetchAnimals()
-      XCTAssertFalse(viewModel.isLoading, "The view model shouldn't be loading, but it is")
+      XCTAssertTrue(sut.isLoading, "The view model should be loading, but it isn't")
+      await sut.fetchAnimals()
+      XCTAssertFalse(sut.isLoading, "The view model shouldn't be loading, but it is")
     }
+  }
+
+  func testUpdatePageOnFetchMoreAnimals() {
+    Task { @MainActor in
+      XCTAssertEqual(
+        sut.page,
+        1,
+        "the view model's page property should be 1 before fetching, but it's \(sut.page)"
+      )
+      await sut.fetchAnimals()
+      XCTAssertEqual(
+        sut.page,
+        2,
+        "the view model's page property should be 2 after fetching, but it's \(sut.page)"
+      )
+    }
+  }
+
+  func testFetchAnimalsEmptyResponse() {
+    Task { @MainActor in
+      sut = AnimalsNearYouViewModel(
+        isLoading: true,
+        animalFetcher: EmptyResponseAnimalsFetcherMock(),
+        animalStore: AnimalStoreService(context: testContext)
+      )
+
+      await sut.fetchAnimals()
+
+      XCTAssertFalse(
+        sut.hasMoreAnimals,
+        "hasMoreAnimals should be false with an empty response, but it's true"
+      )
+      XCTAssertFalse(
+        sut.isLoading,
+        "the view model shouldn't be loading after receiving an empty response, but it is"
+      )
+    }
+  }
+}
+
+struct EmptyResponseAnimalsFetcherMock: AnimalsFetcher {
+
+  func fetchAnimals(page: Int) async -> [Animal] {
+    return []
   }
 }
