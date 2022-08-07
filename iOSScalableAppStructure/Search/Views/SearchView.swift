@@ -19,7 +19,7 @@ struct SearchView: View {
     animation: .default
   )
   private var animals: FetchedResults<AnimalEntity>
-
+  @State var filterPickerIsPresented: Bool = false
 
   @StateObject var viewModel = SearchViewModel(
     animalSearcher: AnimalSearcherService(requestManager: RequestManager()),
@@ -29,10 +29,15 @@ struct SearchView: View {
   )
   var filteredAnimals: [AnimalEntity] {
     guard viewModel.shouldFilter else { return [] }
-    return animals.filter {
-      guard viewModel.searchText.isNotEmpty else { return true }
-      return $0.name?.contains(viewModel.searchText) ?? false
-    }
+    return filterAnimals()
+  }
+  private var filterAnimals: FilterAnimals {
+    return FilterAnimals(
+      animals: animals,
+      query: viewModel.searchText,
+      age: viewModel.ageSelection,
+      type: viewModel.typeSelection
+    )
   }
 
   var body: some View {
@@ -41,6 +46,18 @@ struct SearchView: View {
         .overlay {
           if filteredAnimals.isEmpty && viewModel.searchText.isNotEmpty {
             EmptyResultsView(query: viewModel.searchText)
+          }
+        }
+        .toolbar {
+          ToolbarItem {
+            Button(action: { filterPickerIsPresented.toggle() }) {
+              Label("Filter", systemImage: "slider.horizontal.3")
+            }
+            .sheet(isPresented: $filterPickerIsPresented) {
+              NavigationView {
+                SearchFilterView(viewModel: viewModel)
+              }
+            }
           }
         }
         .searchable(
