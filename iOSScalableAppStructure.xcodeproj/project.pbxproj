@@ -210,6 +210,13 @@
 			path = AnimalsNearYou;
 			sourceTree = "<group>";
 		};
+		AA3B510C289F90F600C5164C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		AA80EA7C289D3BA9000BF8DB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +432,7 @@
 		AAA2283C2896879400081167 /* iOSScalableAppStructureTests */ = {
 			isa = PBXGroup;
 			children = (
+				AA3B510C289F90F600C5164C /* Helper */,
 				AA3B5109289E810D00C5164C /* AnimalsNearYou */,
 				AACE3E0E2897D5DE005ACB10 /* Core */,
 			);
