@@ -1,3 +1,7 @@
+# Change History
+
+변경 이력은 개별 PR에서 상세히 다룹니다. [PR 목록 보기](https://github.com/ryan-son/ios-scalable-app-structure/pulls?q=is%3Apr+is%3Aclosed)
+
 # Following Best Practices
 
 | | Description |
